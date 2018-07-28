@@ -1,5 +1,5 @@
-const inorderTraversal = function(root) {
+const inorderTraversal = root => {
   if(!root) return [];
-  let nums = [...inorderTraversal(root.left), root.val, ...inorderTraversal(root.right)];
+  const nums = [...inorderTraversal(root.left), root.val, ...inorderTraversal(root.right)];
   return nums;
 };
