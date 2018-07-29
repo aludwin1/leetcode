@@ -1,10 +1,9 @@
 const findBottomLeftValue = root => {
   const nodes = [root];
-  let lastNode;
   while (nodes.length > 0) {
-      lastNode = nodes.shift();
-      if(lastNode.right) nodes.push(lastNode.right);
-      if(lastNode.left) nodes.push(lastNode.left);
+      root = nodes.shift();
+      if(root.right) nodes.push(root.right);
+      if(root.left) nodes.push(root.left);
   }
-  return lastNode.val;
+  return root.val;
 };
